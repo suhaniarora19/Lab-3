@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: 
+        "hd hd hd hd hd hd hd hd hd hd hd hd"
+        "nv nv nv nv nv nv nv nv nv nv nv nv"
+        "mn mn mn mn mn mn mn mn mn mn mn mn"
+        "ft ft ft ft ft ft ft ft ft ft ft ft";
+}
+
+header{
+    grid-area: hd;
+    background-color: lightblue;
+    padding: 20px;
+}
+
+nav{
+    grid-area: nv;
+    background-color: lightskyblue;
+    padding: 20px;
+}
+
+main{
+    grid-area: mn;
+    background-color: navy;
+    padding: 20px;
+    display: grid;
+    gap: 10px;
+}
+
+.card-featured{
+    background-color: deepskyblue;
+    padding: 30px;
+}
+
+.card:nth-child(2){
+    background-color: dodgerblue;
+    padding: 30px;
+}
+
+.card:nth-child(3){
+    background-color: royalblue;
+    padding: 30px;
+}
+
+footer{
+    background-color: lightblue;
+    grid-area: ft;
+    padding: 20px;
+}
+
+@media (min-width: 768px){
+    body{
+        grid-template-columns: 220px 1fr;
+        grid-template-areas: 
+            "hd hd"
+            "nv mn"
+            "ft ft";
+        gap: 10px;
+    }
+
+    main{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-featured{
+        grid-column: 1 / -1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
